@@ -106,7 +106,6 @@ export LANG=en_US.UTF-8
 PROMPT='%{$fg[cyan]%}%~ '
 PROMPT+="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$reset_color%}"
 
-
 # ================== conda ==================
 __conda_setup="$('/home/tjy/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -135,3 +134,4 @@ export LIBGL_ALWAYS_INDIRECT=1
 
 # autosuggestions configs
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+bindkey '^ ' forward-word  # CTRL+SPACE to partial accept autocompletion
