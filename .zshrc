@@ -108,32 +108,25 @@ export LANG=en_US.UTF-8
 PROMPT='%{$fg[cyan]%}%~ '
 PROMPT+="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$reset_color%}"
 
-# ================== conda ==================
-__conda_setup="$('/home/tjy/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jtang/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/tjy/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/tjy/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/jtang/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jtang/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/tjy/miniconda3/bin:$PATH"
+        export PATH="/home/jtang/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-
-# RUBY and GEMS
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-
-# go
-export PATH=$PATH:/home/tjy/go/bin
-export GOPROXY=https://goproxy.io,direct
-
-# xserver
-export DISPLAY=:0
-export LIBGL_ALWAYS_INDIRECT=1
-
+# <<< conda initialize <<<
 
 # autosuggestions configs
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 bindkey '^ ' forward-word  # CTRL+SPACE to partial accept autocompletion
+
+# Don't share history between tmux windows
+setopt nosharehistory
+
