@@ -130,3 +130,5 @@ bindkey '^ ' forward-word  # CTRL+SPACE to partial accept autocompletion
 # Don't share history between tmux windows
 setopt nosharehistory
 
+bindkey "\E[1~" beginning-of-line
+bindkey "\E[4~" end-of-line
