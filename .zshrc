@@ -102,6 +102,7 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ll="ls -alh"
 
 # PROMPT
 PROMPT='%{$fg[cyan]%}%~ '
@@ -131,3 +132,5 @@ setopt nosharehistory
 
 bindkey "\E[1~" beginning-of-line
 bindkey "\E[4~" end-of-line
+
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
