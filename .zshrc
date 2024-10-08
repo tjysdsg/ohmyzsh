@@ -90,7 +90,9 @@ export LANG=en_US.UTF-8
 # else
 #   export EDITOR='nvim'
 # fi
-export EDITOR='nvim'
+
+# export EDITOR='nvim'
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -109,20 +111,20 @@ alias ll="ls -alh"
 PROMPT='%{$fg[cyan]%}%~ '
 PROMPT+="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$reset_color%}"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/tjy/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/tjy/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/tjy/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/tjy/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/tjy/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/tjy/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/tjy/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/tjy/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
 
 # autosuggestions configs
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
