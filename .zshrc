@@ -138,3 +138,5 @@ bindkey "\E[1~" beginning-of-line
 bindkey "\E[4~" end-of-line
 
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+
+export GPG_TTY=$(tty)
