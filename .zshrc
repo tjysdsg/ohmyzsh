@@ -140,3 +140,7 @@ bindkey "\E[4~" end-of-line
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 
 export GPG_TTY=$(tty)
+
+if [ -f ~/dotfiles-local/.zshrc ]; then
+    . ~/dotfiles-local/.zshrc
+fi
