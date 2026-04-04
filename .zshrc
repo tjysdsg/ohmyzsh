@@ -144,3 +144,6 @@ export GPG_TTY=$(tty)
 if [ -f ~/dotfiles-local/.zshrc ]; then
     . ~/dotfiles-local/.zshrc
 fi
+
+export GIT_DISCOVERY_ACROSS_FILESYSTEM=true
+
